@@ -57,7 +57,7 @@ class ShoppingListScreenState extends State<ShoppingListScreen> {
 
   void _addItem(ShoppingItem item) {
     setState(() {
-      _shoppingList.add(item);
+      _shoppingList.insert(0, item);
       _quantityControllers[item.id] = TextEditingController(text: item.quantity.toString());
       _quantityFocusNodes[item.id] = FocusNode();
     });
