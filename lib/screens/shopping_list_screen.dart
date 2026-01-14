@@ -126,9 +126,6 @@ class ShoppingListScreenState extends State<ShoppingListScreen> {
                   ),
                   onDismissed: (direction) {
                     _removeItem(item);
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(content: Text('${item.name} تم حذفه')),
-                    );
                   },
                   child: ListTile(
                     title: Text(
